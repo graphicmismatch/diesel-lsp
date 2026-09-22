@@ -102,7 +102,7 @@ test('advertises its capabilities and publishes diagnostics on open', async () =
     assert.strictEqual(initialize.capabilities.hoverProvider, true);
     assert.strictEqual(initialize.capabilities.definitionProvider, true);
     assert.strictEqual(initialize.capabilities.documentSymbolProvider, true);
-    assert.ok(initialize.capabilities.completionProvider.triggerCharacters.includes('.'));
+    assert.deepStrictEqual(initialize.capabilities.completionProvider.triggerCharacters, ['.', '"']);
     const published = await client.waitForNotification('textDocument/publishDiagnostics');
     assert.strictEqual(published.params.uri, URI);
     assert.strictEqual(published.params.diagnostics.length, 1);

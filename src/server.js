@@ -97,7 +97,7 @@ function start(input = process.stdin, output = process.stdout) {
   connection.on('initialize', () => ({
     capabilities: {
       textDocumentSync: { openClose: true, change: 1 },
-      completionProvider: { triggerCharacters: ['.', '"', ' '], resolveProvider: false },
+      completionProvider: { triggerCharacters: ['.', '"'], resolveProvider: false },
       hoverProvider: true,
       definitionProvider: true,
       documentSymbolProvider: true,
