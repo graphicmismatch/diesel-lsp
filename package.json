@@ -1,0 +1,14 @@
+{
+  "name": "diesel-lsp",
+  "version": "0.1.0",
+  "description": "Language server for Diesel, the Petroleum synthesizer patch language (.dsl)",
+  "license": "MIT",
+  "bin": { "diesel-lsp": "bin/diesel-lsp.js" },
+  "main": "src/server.js",
+  "files": ["bin", "src", "data"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": ["lsp", "language-server", "diesel", "petroleum", "dsl"]
+}
